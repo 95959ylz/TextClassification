@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻文本分类</title>
+		<script src="./js/vue.js"></script>
+		<script src="./js/jquery-3.5.1.min.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<table cellpadding="10px" border="1px">
+				<tr align="center">
+					<td></td>
+					<td>precision</td>
+					<td>recall</td>
+					<td>f1-score</td>
+					<td>support</td>
+				</tr>
+				<tr v-for="item in arr" :key="item.name" align="center">
+					<td>{{item.name}}</td>
+					<td>{{item.precision}}</td>
+					<td>{{item.recall}}</td>
+					<td>{{item.f1_score}}</td>
+					<td>{{item.support}}</td>
+				</tr>
+			</table>
+			<textarea id="text_news" cols="50" rows="10"></textarea><button onclick='category()' id="buttons">搜索</button>
+		</div>
+			<script>
+					var text = {
+						Text:'123'
+					};
+					
+					function category() {
+						var text1=$("#text_news").val();
+						var text = {
+							Text: text1
+						};
+						$.ajax({
+						    url: 'http://127.0.0.1:5000/text_category',
+						    type: "POST",
+						    data: JSON.stringify(text),
+						    dataType: "json",
+						    success: function (data) {
+						        console.log(data)
+						    }
+						})
+					}
+			</script>
+		<script src="./js/axios.min.js"></script>
+		<script>
+			
+			new Vue({
+				el:"#app",
+				data:{
+					arr:[
+						{
+							name:"体育",
+							precision:0.98,
+							recall:0.99,
+							f1_score:0.99,
+							support:26320,
+						},
+						{
+							name:"财经",
+							precision:0.92,
+							recall:0.84,
+							f1_score:0.87,
+							support:7400,
+						},
+						{
+							name:"房产",
+							precision:1.00,
+							recall:0.99,
+							f1_score:0.99,
+							support:4000,
+						},
+						{
+							name:"家居",
+							precision:0.95,
+							recall:0.93,
+							f1_score:0.94,
+							support:6500,
+						},
+						{
+							name:"教育",
+							precision:0.93,
+							recall:0.93,
+							f1_score:0.93,
+							support:8380,
+						},
+						{
+							name:"科技",
+							precision:0.94,
+							recall:0.94,
+							f1_score:0.94,
+							support:32580,
+						},
+						{
+							name:"时尚",
+							precision:0.91,
+							recall:0.91,
+							f1_score:0.91,
+							support:2660,
+						},
+						{
+							name:"时政",
+							precision:0.90,
+							recall:0.92,
+							f1_score:0.91,
+							support:12600,
+						},
+						{
+							name:"游戏",
+							precision:0.96,
+							recall:0.88,
+							f1_score:0.92,
+							support:4860,
+						},
+						{
+							name:"娱乐",
+							precision:0.94,
+							recall:0.97,
+							f1_score:0.96,
+							support:18520,
+						},
+						{
+							name:"彩票",
+							precision:0.97,
+							recall:0.89,
+							f1_score:0.93,
+							support:1500,
+						},
+						{
+							name:"星座",
+							precision:0.92,
+							recall:0.90,
+							f1_score:0.91,
+							support:700,
+						},
+						{
+							name:"社会",
+							precision:0.87,
+							recall:0.89,
+							f1_score:0.88,
+							support:10160,
+						},
+						{
+							name:"股票",
+							precision:0.95,
+							recall:0.96,
+							f1_score:0.95,
+							support:30860,
+						}
+					]
+				},
+			})
+			
+		</script>
+	</body>
+</html>
