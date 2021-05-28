@@ -11,6 +11,10 @@ RNN对具有序列特性的数据非常有效，它能挖掘数据中的时序�
 
 ![image](https://user-images.githubusercontent.com/84953043/119954928-13bb2000-bfd2-11eb-88aa-90bc39c23a62.png)
 
+<h2>训练过程</h2>
+![image](https://user-images.githubusercontent.com/84953043/119974490-4cb1bf80-bfe7-11eb-9968-b4b1f7b8a600.png)
+![image](https://user-images.githubusercontent.com/84953043/119974514-56d3be00-bfe7-11eb-98cc-0de48982b875.png)
+
 <h2>测试结果</h2>
 ![image](https://user-images.githubusercontent.com/84953043/119955154-5977e880-bfd2-11eb-81eb-265e8de39d74.png)
 
