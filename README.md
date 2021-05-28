@@ -4,7 +4,7 @@
 
 <h2>模型选择</h2>
 
-RNN对具有序列特性的数据非常有效，它能挖掘数据中的时序信息以及语义信息.为了解决长程依赖问题，需要引入门控机制来控制信息的累积速度，更好地捕捉时间序列中时间步距离较大的依赖关系。它通过可以学习的门来控制信息的流动，避免模型收敛时出现梯度爆炸或衰减。因此，在模型中采用门控循环单元（gated recurrent unit，GRU）网络，gru是一种常用的门控循环神经网络。
+RNN对具有序列特性的数据非常有效，它能挖掘数据中的时序信息以及语义信息.为了解决长程依赖问题，需要引入门控机制来控制信息的累积速度，更好地捕捉时间序列中时间步距离较大的依赖关系。它通过可以学习的门来控制信息的流动，避免模型收敛时出现梯度爆炸或衰减。因此，在模型中采用<strong>门控循环单元</strong>（gated recurrent unit，GRU）网络，gru是一种常用的门控循环神经网络。
 
 
 <h2>模型结构图</h2>
@@ -12,7 +12,7 @@ RNN对具有序列特性的数据非常有效，它能挖掘数据中的时序�
 ![image](https://user-images.githubusercontent.com/84953043/119954928-13bb2000-bfd2-11eb-88aa-90bc39c23a62.png)
 
 <h2>训练过程</h2>
-![image](https://user-images.githubusercontent.com/84953043/119974490-4cb1bf80-bfe7-11eb-9968-b4b1f7b8a600.png)
+<img src="https://user-images.githubusercontent.com/84953043/119974490-4cb1bf80-bfe7-11eb-9968-b4b1f7b8a600.png">![image](https://user-images.githubusercontent.com/84953043/119974490-4cb1bf80-bfe7-11eb-9968-b4b1f7b8a600.png)
 ![image](https://user-images.githubusercontent.com/84953043/119974514-56d3be00-bfe7-11eb-98cc-0de48982b875.png)
 
 <h2>测试结果</h2>
